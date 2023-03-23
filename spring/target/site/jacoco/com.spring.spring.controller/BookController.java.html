@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">spring</a> &gt; <a href="index.source.html" class="el_package">com.spring.spring.controller</a> &gt; <span class="el_source">BookController.java</span></div><h1>BookController.java</h1><pre class="source lang-java linenums">package com.spring.spring.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.spring.model.Books;
+import com.spring.spring.service.BookService;
+
+@RestController
+<span class="fc" id="L18">public class BookController {</span>
+    @Autowired  
+BookService booksService;  
+
+@GetMapping(&quot;/book&quot;)
+public List&lt;Books&gt; getAllBooks()   
+{  
+<span class="fc" id="L25">return booksService.getAllBooks();  </span>
+}  
+
+@GetMapping(&quot;/book/{bookid}&quot;)
+public Books getBooks(@PathVariable(&quot;bookid&quot;) int bookid)   
+{  
+<span class="fc" id="L31">return booksService.getBooksById(bookid);  </span>
+}  
+
+@DeleteMapping(&quot;/book/{bookid}&quot;)
+public void deleteBook(@PathVariable(&quot;bookid&quot;) int bookid)   
+{  
+<span class="fc" id="L37">booksService.delete(bookid);  </span>
+<span class="fc" id="L38">}  </span>
+
+@PostMapping(&quot;/books&quot;)  
+public int saveBook(@RequestBody Books books)   
+{  
+<span class="fc" id="L43">booksService.saveOrUpdate(books);  </span>
+<span class="fc" id="L44">return books.getBookid();  </span>
+}  
+
+@PutMapping(&quot;/books&quot;)
+public Books update(@RequestBody Books books)   
+{  
+<span class="fc" id="L50">booksService.saveOrUpdate(books);  </span>
+<span class="fc" id="L51">return books;  </span>
+}
+
+ 
+
+}
+
+
+ 
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

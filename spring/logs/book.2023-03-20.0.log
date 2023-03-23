@@ -1,0 +1,5 @@
+2023-03-20 14:45:27.439 [main] INFO  com.spring.spring.Application - Starting Application on KGISL058 with PID 17904 (D:\neerkath\spring\target\classes started by neerkathalingam.v in D:\neerkath\spring)
+2023-03-20 14:45:27.441 [main] INFO  com.spring.spring.Application - No active profile set, falling back to default profiles: default
+2023-03-20 14:45:28.078 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-03-20 14:45:28.143 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65ms. Found 1 repository interfaces.
+2023-03-20 14:45:28.461 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1c5eab4a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)

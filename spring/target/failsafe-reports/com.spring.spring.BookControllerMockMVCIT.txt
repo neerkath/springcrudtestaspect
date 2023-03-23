@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: com.spring.spring.BookControllerMockMVCIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 3, Skipped: 0, Time elapsed: 4.529 s <<< FAILURE! - in com.spring.spring.BookControllerMockMVCIT
+getAll  Time elapsed: 0.292 s  <<< FAILURE!
+java.lang.AssertionError: [0] Could not find match for element {"id":1}
+	at com.spring.spring.BookControllerMockMVCIT.getAll(BookControllerMockMVCIT.java:42)
+
+getOne  Time elapsed: 0.061 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: id
+     but none found
+
+	at com.spring.spring.BookControllerMockMVCIT.getOne(BookControllerMockMVCIT.java:52)
+
+update  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method when(T) in the type Mockito is not applicable for the arguments (void)
+
+	at com.spring.spring.BookControllerMockMVCIT.update(BookControllerMockMVCIT.java:60)
+
+postmapping  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method when(T) in the type Mockito is not applicable for the arguments (void)
+
+	at com.spring.spring.BookControllerMockMVCIT.postmapping(BookControllerMockMVCIT.java:69)
+
+deleteByID  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method when(T) in the type Mockito is not applicable for the arguments (void)
+
+	at com.spring.spring.BookControllerMockMVCIT.deleteByID(BookControllerMockMVCIT.java:81)
+
